@@ -49,7 +49,7 @@ jobs:
       - name: 'Create Terraform S3 Bucket' # changes were made 
         run: |
           aws s3api create-bucket \
-            --bucket tf-solob-prod-terraform-001\ 
+            --bucket tf-solob-prod-terraform-001 \
             --region eu-north-1 \
             --create-bucket-configuration LocationConstraint=eu-north-1
 
