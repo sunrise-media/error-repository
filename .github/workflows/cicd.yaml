@@ -46,13 +46,12 @@ jobs:
           ./tfsec --version
 
 
-      # - name: 'Create Terraform S3 Bucket' # changes were made
-      
-      #   run: |
-      #     aws s3api create-bucket \
-      #       --bucket soluchi-obim\ 
-      #       --region eu-north-1 \
-      #       --create-bucket-configuration LocationConstraint=eu-north-1
+      - name: 'Create Terraform S3 Bucket' # changes were made 
+        run: |
+          aws s3api create-bucket \
+            --bucket tf-solob-s3\ 
+            --region eu-north-1 \
+            --create-bucket-configuration LocationConstraint=eu-north-1
 
 
       - name: 'Terraform Init'
